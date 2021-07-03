@@ -7,7 +7,8 @@ class Countdown extends React.Component {
             day : 0,
             hour : 0,
             minute :0,
-            second : 0
+            second : 0,
+            gap :0
         }
         this.countdown = this.countdown.bind(this);
     }
@@ -31,13 +32,15 @@ class Countdown extends React.Component {
                 day : textDay,
                 hour : textHour,
                 minute : textMinute,
-                second : textSecond
+                second : textSecond,
+                gap : gap
             })
         }
     }
     
     render(){
         setInterval(this.countdown, 1000);
+        if(this.state.gap> 0 ){
         return (
             <>
                 <section className="coming-soon">
@@ -65,7 +68,9 @@ class Countdown extends React.Component {
                     <img className="waiting" src="https://media3.giphy.com/media/lP4jmO461gq9uLzzYc/giphy.gif" alt=""/>
                 </section>
             </>
-        )
+        )}else{
+                <h1>this event already started</h1>
+        }
     }
     
 }
