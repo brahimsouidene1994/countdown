@@ -69,7 +69,7 @@ class Countdown extends React.Component {
                 </section>
             </>
         )}else{
-                <h1>this event already started</h1>
+                return (<h1>this event already started</h1>)
         }
     }
     
