@@ -12,7 +12,7 @@ class Countdown extends React.Component {
         this.countdown = this.countdown.bind(this);
     }
     countdown = () =>{
-        const countDate = new Date("august 17, 2021 00:00:00").getTime();
+        const countDate = new Date("may 17, 2021 00:00:00").getTime();
         const now = new Date().getTime();
         const gap = countDate - now;
 
@@ -25,12 +25,15 @@ class Countdown extends React.Component {
         const textHour = Math.floor((gap % day) / hour);
         const textMinute = Math.floor((gap % hour) / minute);
         const textSecond = Math.floor((gap % minute) / second);
-        this.setState({
-            day : textDay,
-            hour : textHour,
-            minute : textMinute,
-            second : textSecond
-        })
+        if(gap !== 0){
+
+            this.setState({
+                day : textDay,
+                hour : textHour,
+                minute : textMinute,
+                second : textSecond
+            })
+        }
     }
     
     render(){
