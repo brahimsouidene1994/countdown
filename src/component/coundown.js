@@ -25,7 +25,7 @@ class Countdown extends React.Component {
         const textHour = Math.floor((gap % day) / hour);
         const textMinute = Math.floor((gap % hour) / minute);
         const textSecond = Math.floor((gap % minute) / second);
-        if(gap !== 0){
+        if(gap >= 0){
 
             this.setState({
                 day : textDay,
