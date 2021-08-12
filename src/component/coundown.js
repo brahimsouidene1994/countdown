@@ -13,7 +13,7 @@ class Countdown extends React.Component {
         this.countdown = this.countdown.bind(this);
     }
     countdown = () =>{
-        const countDate = new Date("may 17, 2021 00:00:00").getTime();
+        const countDate = new Date("septembre 17, 2021 00:00:00").getTime();
         const now = new Date().getTime();
         const gap = countDate - now;
 
